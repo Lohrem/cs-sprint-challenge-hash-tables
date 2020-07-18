@@ -3,6 +3,19 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    dict = {}
+    result = []
+
+    for array in arrays:
+        for item in array:
+            if item in dict:
+                dict[item] += 1
+            else:
+                dict[item] = 1
+        
+        for key, value in dict.items():
+            if value == len(arrays):
+                result.append(key)
 
     return result
 
